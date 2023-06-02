@@ -133,7 +133,7 @@ public class VodController extends BaseController {
 
     Handler myHandle;
     Runnable myRunnable;
-    int myHandleSeconds = 10000;//闲置多少毫秒秒关闭底栏  默认6秒
+    int myHandleSeconds = 6000;//闲置多少毫秒秒关闭底栏  默认6秒
 
     int videoPlayState = 0;
 
@@ -319,7 +319,7 @@ public class VodController extends BaseController {
                 try {
                     float speed = (float) mPlayerConfig.getDouble("sp");
                     speed += 0.25f;
-                    if (speed > 3)
+                    if (speed > 5)
                         speed = 0.5f;
                     mPlayerConfig.put("sp", speed);
                     updatePlayerCfgView();
