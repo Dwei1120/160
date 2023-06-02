@@ -17,8 +17,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.ClipboardManager;
-import android.content.ClipData;
+//import android.content.ClipboardManager;
+//import android.content.ClipData;
 
 import androidx.fragment.app.FragmentContainerView;
 import androidx.lifecycle.Observer;
@@ -108,7 +108,7 @@ public class DetailActivity extends BaseActivity {
     private TextView tvType;
     private TextView tvActor;
     private TextView tvDirector;
-    private TextView tvPlayUrl;
+    //private TextView tvPlayUrl;
     private TextView tvDes;
     private TextView tvPlay;
     private TextView tvSort;
@@ -166,7 +166,7 @@ public class DetailActivity extends BaseActivity {
         tvType = findViewById(R.id.tvType);
         tvActor = findViewById(R.id.tvActor);
         tvDirector = findViewById(R.id.tvDirector);
-        tvPlayUrl = findViewById(R.id.tvPlayUrl);
+        //tvPlayUrl = findViewById(R.id.tvPlayUrl);
         tvDes = findViewById(R.id.tvDes);
         tvPlay = findViewById(R.id.tvPlay);
         tvSort = findViewById(R.id.tvSort);
@@ -209,7 +209,7 @@ public class DetailActivity extends BaseActivity {
         mSeriesGroupView.setAdapter(seriesGroupAdapter);
 
         //禁用播放地址焦点
-        tvPlayUrl.setFocusable(false);
+        //tvPlayUrl.setFocusable(false);
 
         llPlayerFragmentContainerBlock.setOnClickListener((view -> toggleFullPreview()));
 
@@ -224,7 +224,7 @@ public class DetailActivity extends BaseActivity {
                     vodInfo.playIndex=(vodInfo.seriesMap.get(vodInfo.playFlag).size()-1)-vodInfo.playIndex;
 //                    insertVod(sourceKey, vodInfo);
                     firstReverse = true;
-                    setSeriesGroupOptions();
+//                    setSeriesGroupOptions();
                     seriesAdapter.notifyDataSetChanged();
                 }
             }
@@ -291,6 +291,7 @@ public class DetailActivity extends BaseActivity {
                 }
             }
         });
+        /*
         tvPlayUrl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -301,6 +302,7 @@ public class DetailActivity extends BaseActivity {
                 Toast.makeText(DetailActivity.this, "已复制", Toast.LENGTH_SHORT).show();
             }
         });
+        */
         mGridView.setOnItemListener(new TvRecyclerView.OnItemListener() {
             @Override
             public void onItemPreSelected(TvRecyclerView parent, View itemView, int position) {
@@ -456,7 +458,7 @@ public class DetailActivity extends BaseActivity {
         if (vodInfo != null && vodInfo.seriesMap.get(vodInfo.playFlag).size() > 0) {
             preFlag = vodInfo.playFlag;
             //更新播放地址
-            setTextShow(tvPlayUrl, "播放地址：", vodInfo.seriesMap.get(vodInfo.playFlag).get(vodInfo.playIndex).url);
+            //setTextShow(tvPlayUrl, "播放地址：", vodInfo.seriesMap.get(vodInfo.playFlag).get(vodInfo.playIndex).url);
             Bundle bundle = new Bundle();
             //保存历史
             insertVod(sourceKey, vodInfo);
@@ -531,7 +533,7 @@ public class DetailActivity extends BaseActivity {
         mGridViewLayoutMgr.setSpanCount(offset);
         seriesAdapter.setNewData(vodInfo.seriesMap.get(vodInfo.playFlag));
 
-        setSeriesGroupOptions();
+        //setSeriesGroupOptions();
 
         mGridView.postDelayed(new Runnable() {
             @Override
@@ -664,7 +666,7 @@ public class DetailActivity extends BaseActivity {
                                 flag.selected = false;
                         }
                         //设置播放地址
-                        setTextShow(tvPlayUrl, "播放地址：", vodInfo.seriesMap.get(vodInfo.playFlag).get(0).url);
+                        //setTextShow(tvPlayUrl, "播放地址：", vodInfo.seriesMap.get(vodInfo.playFlag).get(0).url);
                         seriesFlagAdapter.setNewData(vodInfo.seriesFlags);
                         mGridViewFlag.scrollToPosition(flagScrollTo);
 
