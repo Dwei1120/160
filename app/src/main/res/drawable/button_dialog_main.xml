@@ -5,6 +5,7 @@
             <corners android:radius="@dimen/vs_5" />
             <!--  选中按钮颜色   -->
             <!--<solid android:color="@color/color_353744" />-->
+            <stroke android:width="2mm" android:color="@android:color/white" />
             <solid android:color="@color/color_1890FF" />
         </shape>
     </item>
