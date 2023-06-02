@@ -225,6 +225,7 @@ public class DetailActivity extends BaseActivity {
 //                    insertVod(sourceKey, vodInfo);
                     firstReverse = true;
 //                    setSeriesGroupOptions();
+                    mSeriesGroupView.setVisibility(View.GONE);
                     seriesAdapter.notifyDataSetChanged();
                 }
             }
@@ -534,6 +535,7 @@ public class DetailActivity extends BaseActivity {
         seriesAdapter.setNewData(vodInfo.seriesMap.get(vodInfo.playFlag));
 
         //setSeriesGroupOptions();
+        mSeriesGroupView.setVisibility(View.GONE);
 
         mGridView.postDelayed(new Runnable() {
             @Override
