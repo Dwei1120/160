@@ -162,14 +162,14 @@ public class RemoteConfig {
         if (GetValue(RemoteConfigName.VoiceApiSecret)!=null) {
             voiceApiSecret =  GetValue(RemoteConfigName.VoiceApiSecret).getAsString();
         }
-        // endregion
+        /*/ endregion
         // region 讯飞ApiKey
         if (GetValue(RemoteConfigName.VoiceApiKey)!=null) {
             voiceApiKey =  GetValue(RemoteConfigName.VoiceApiKey).getAsString();
         }
         // endregion
         WebIATWS.RemoteSetKey(voiceAppID, voiceApiSecret, voiceApiKey);
-        // endregion
+        // endregion  */
 
         //region 默认直播配置
         if (GetValue(RemoteConfigName.Live)!=null) {
