@@ -151,7 +151,7 @@ public class RemoteConfig {
         
         // endregion 默认配置
         
-        // region 语音搜索
+        /*/ region 语音搜索
         String voiceAppID="",voiceApiSecret="",voiceApiKey ="";
         // region 讯飞AppID
         if (GetValue(RemoteConfigName.VoiceAppID)!=null) {
@@ -162,7 +162,7 @@ public class RemoteConfig {
         if (GetValue(RemoteConfigName.VoiceApiSecret)!=null) {
             voiceApiSecret =  GetValue(RemoteConfigName.VoiceApiSecret).getAsString();
         }
-        /*/ endregion
+        // endregion
         // region 讯飞ApiKey
         if (GetValue(RemoteConfigName.VoiceApiKey)!=null) {
             voiceApiKey =  GetValue(RemoteConfigName.VoiceApiKey).getAsString();
