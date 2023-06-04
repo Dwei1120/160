@@ -3,7 +3,7 @@ package com.github.tvbox.osc.util;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.github.other.xunfei.WebIATWS;
+//import com.github.other.xunfei.WebIATWS;
 import com.github.tvbox.osc.base.BaseActivity;
 import com.github.tvbox.osc.ui.activity.HomeActivity;
 import com.github.tvbox.osc.ui.dialog.UpdateDialog;
