@@ -45,7 +45,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="@dimen/vs_30"
-                android:text="全不选"
+                android:text="取消"
                 android:textColor="@color/color_FFFFFF"
                 android:textSize="@dimen/ts_26" />
         </LinearLayout>
