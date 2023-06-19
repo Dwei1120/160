@@ -20,7 +20,7 @@ import com.orhanobut.hawk.Hawk;
  * 远程文件配置
  */
 public class RemoteConfig {
-    private static String remoteUrl = "https://0dlj.cn/config";
+    private static String remoteUrl = "https://gitee.com/wei1120/dwei/raw/master/remote.ini";
     private static JsonObject remoteJsonObject;
     private static boolean isRemoteConfigOk;
     private static Context mContext;
